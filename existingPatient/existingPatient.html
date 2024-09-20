@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="existingPatient.css">
+    <link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css'
+          rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+    <img src="../assets/favicon.png">
+    <form>
+        <div class="container">
+            <table>
+                <tr>
+                    <td>
+                        <label for="uhid" class="text-labels"><b>Enter UHID</b></label>
+                    </td>
+                    <td>
+                        <input type="text" id="uhid" class="text-field" name="uhid" placeholder="UHID *">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="department" class="text-labels"><b>Select Department</b></label>
+                    </td>
+                    <td>
+                        <select id="department" class="clearfix text-field" name="department" placeholder="Department *">
+                            <option value="default"></option>
+                            <option value="Psychiatry">Psychiatry</option>
+                            <option value="Neurology">Neurology</option>
+                            <option value="Emergency">Emergency</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="unit" class="text-labels"><b>Select Unit</b></label>
+                    </td>
+                    <td>
+                        <select id="unit-name" class="clearfix text-field" name="unit-name" placeholder="Unit *">
+                            <option value="default"></option>
+                            <option value="unit1">Unit 1</option>
+                            <option value="unit2">Unit 2</option>
+                            <option value="unit3">Unit 3</option>
+                            <option value="unit4">Unit 4</option>
+                            <option value="unit5">Unit 5</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="doctor-name" class="text-labels"><b>Enter Doctor's Name</b></label>
+                    </td>
+                    <td>
+                        <input type="text" id="doctor-name" class="text-field" name="doctor-name" placeholder="Doctor's Name *">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="time" class="text-labels"><b>Enter Time</b></label>
+                    </td>
+                    <td>
+                        <input type="time" id="time" class="text-field" name="time" placeholder="Time *">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="amount" class="text-labels"><b>Enter Time</b></label>
+                    </td>
+                    <td>
+                        <input type="text" id="amount-paid" class="text-field" name="amount" placeholder="Amount *">
+                    </td>
+                </tr>
+            </table>
+            <button type="button" onclick="opd()" class="generate-receipt-button">
+                Generate Receipt
+            </button>
+            <p id="uhid-r"></p>
+            <p id="unit-name-r"></p>
+            <p id="doctor-name-r"></p>
+            <p id="amount"></p>
+            <p id="time-slot"></p>
+        </div>
+    </form>
+    <script src="existingPatient.js"></script>
+</body>
+</html>

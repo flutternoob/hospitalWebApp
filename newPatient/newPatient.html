@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add patient</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="newPatient.css">
+    <link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css'
+          rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+    <img src="../assets/favicon.png">
+    <form>
+        <div class="container">
+            <table>
+                <tr>
+                    <td>
+                        <label for="first-name" class="text-labels"><b>Enter First Name: </b></label>
+                    </td>
+                    <td>
+                        <input type="text" id="fname" class="text-field" name="first-name" placeholder="First Name*">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="last-name" class="text-labels"><b>Enter Last Name: </b></label>
+                    </td>
+                    <td>
+                        <input type="text" id="lname" class="text-field" name="last-name" placeholder="Last Name*">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="dob" class="text-labels"><b>Enter Date of Birth: </b></label>
+                    </td>
+                    <td>
+                        <input type="text" id="datepicker" class="text-field" name="birthday" placeholder="Date of Birth *">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="age" class="text-labels"><b>Enter Age: </b></label>
+                    </td>
+                    <td>
+                        <input type="text" id="age" class="text-field" name="age" placeholder="Age *">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="caretaker-name" class="text-labels"><b>Enter Caretaker's Name: </b></label>
+                    </td>
+                    <td>
+                        <input type="text" id="caretakerName" class="text-field" name="caretaker-name" placeholder="Caretaker's Name *">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="phone-number" class="text-labels"><b>Enter Phone Number: </b></label>
+                    </td>
+                    <td>
+                        <input type="text" id="number" class="text-field" name="phone-number" placeholder="Phone Number *">
+                    </td>
+                </tr>
+            </table>
+            <button type="button" onclick="generateUhid()" class="uhid-button">
+                Generate UHID
+            </button>
+            <p id="uhid"></p>
+        </div>
+    </form>
+    <script src="newPatient.js"></script>
+</body>
+</html>
