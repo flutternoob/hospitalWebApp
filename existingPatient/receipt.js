@@ -2,7 +2,7 @@ const receiptObjectString2 = localStorage.getItem("objectReceipt");
 const receiptObject2 = JSON.parse(receiptObjectString2);
 console.log(receiptObjectString2);
 
-document.getElementById("uhid-r").innerHTML = `UHID: <b>${receiptObject2["UHID"]}</b>`;
+document.getElementById("hospital-no-r").innerHTML = `Hospital No: <b>${receiptObject2["Hospital Number"]}</b>`;
 document.getElementById("unit-name-r").innerHTML = `Unit Name: <b>${receiptObject2["Unit"]}</b>`;
 document.getElementById("doctor-name-r").innerHTML = `Doctor's Name: <b>${receiptObject2["Doctor's Name"]}</b>`;
 document.getElementById("amount").innerHTML = `Amount Paid: <b>${receiptObject2["Amount"]}</b>`;

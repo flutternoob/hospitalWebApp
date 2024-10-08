@@ -6,13 +6,13 @@ $(document).ready(function () {
 
 function opd() {
 
-    let uhidElement = document.getElementById("uhid");
-    let uhidString = uhidElement.value;
+    let hospitalNoElement = document.getElementById("hospitalNo");
+    let hospitalNoString = hospitalNoElement.value;
 
-    if (uhidString == '') {
-        console.log('UHID is needed');
+    if (hospitalNoString == '') {
+        console.log('Hospital Number is needed');
     } else {
-        uhidString = uhidElement.value;
+        hospitalNoString = hospitalNoElement.value;
     }
 
     var departmentDropdown = document.getElementById("department");
@@ -55,9 +55,9 @@ function opd() {
         amountPaidString = amountPaid.value;
     }
 
-    if (uhidString != '' && departmentString != '' && unitNameString != '' && doctorNameString != '' && timeString != '' && amountPaidString != '') {
+    if (hospitalNoString != '' && departmentString != '' && unitNameString != '' && doctorNameString != '' && timeString != '' && amountPaidString != '') {
         const receiptObject = {
-            "UHID": uhidString,
+            "Hospital Number": hospitalNoString,
             "Department": departmentString,
             "Unit": unitNameString,
             "Doctor's Name": doctorNameString,

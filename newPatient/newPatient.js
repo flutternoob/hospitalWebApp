@@ -61,8 +61,8 @@ function generateUhid() {
     }
 
     if (firstNameString != '' && lastNameString != '' && pickedDateString != '' && ageString != '' && caretakerString != '' && numberString != '') {
-        let randomUhid = Math.floor(100000 + Math.random() * 900000);
-        document.getElementById("uhid").innerHTML = `The UHID is <b>P${randomUhid.toString()}</b>`;
+        let randomHospitalNo = Math.floor(100000 + Math.random() * 900000);
+        document.getElementById("hospital-no").innerHTML = `The Hospital No. is <b>P${randomHospitalNo.toString()}</b>`;
     } else {
         alert("Enter all the fields");
     }
