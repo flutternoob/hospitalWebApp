@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Web App</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <img src="../assets/favicon.png">
+        <ul>
+            <li class="dropdown"><a href="" class="menuitem">ADMIN</a>
+                <div class="dropdown-content">
+                    <table class="submenuitems">
+                        <tr class="submenuitems">
+                            <td class="submenuitems">
+                                <button class="button-style" onclick="newAdmin()">New Admin</button><br><br>
+                                <button class="button-style" onclick="existingAdmin()">Existing Admin</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </li>
+            <li class="dropdown"><a href="" class="menuitem">DOCTOR</a>
+                <div class="dropdown-content">
+                    <table class="submenuitems">
+                        <tr class="submenuitems">
+                            <td class="submenuitems">
+                                <button class="button-style" onclick="newDoctor()">New Doctor</button><br><br>
+                                <button class="button-style" onclick="existingDoctor()">Existing Doctor</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </li>
+        </ul> 
+        <div id="new-admin">
+            <form>
+                <div class="container">
+                    <table class="form-table">
+                        <tr>
+                            <td class="form-table-data">
+                                <label for="admin-username" class="text-labels"><b>New Admin Username: </b></label>
+                            </td>
+                            <td class="form-table-data">
+                                <input type="text" id="admin-username" class="text-field" name="admin-username" placeholder="Admin Username *">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="form-table-data">
+                                <label for="admin-password" class="text-labels"><b>New Admin Password: </b></label>
+                            </td>
+                            <td class="form-table-data">
+                                <input type="password" id="admin-password" class="text-field" name="admin-password" placeholder="Admin Password *">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="form-table-data">
+                                <label for="confirm-admin-password" class="text-labels"><b>Confirm Admin Password: </b></label>
+                            </td>
+                            <td class="form-table-data">
+                                <input type="password" id="confirm-admin-password" class="text-field" name="confirm-admin-password" placeholder="Admin Password *">
+                            </td>
+                        </tr>
+                    </table>
+                    <button type="button" onclick="newAdminLogin()" class="form-button">
+                        Create Admin
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div id="existing-admin">
+            <form>
+                <div class="container">
+                    <table class="form-table">
+                        <tr>
+                            <td class="form-table-data">
+                                <label for="admin-username" class="text-labels"><b>Existing Admin Username: </b></label>
+                            </td>
+                            <td class="form-table-data">
+                                <input type="text" id="admin-username" class="text-field" name="admin-username" placeholder="Admin Username *">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="form-table-data">
+                                <label for="admin-password" class="text-labels"><b>Existing Admin Password: </b></label>
+                            </td>
+                            <td class="form-table-data">
+                                <input type="password" id="admin-password" class="text-field" name="admin-password" placeholder="Admin Password *">
+                            </td>
+                        </tr>
+                    </table>
+                    <button type="button" onclick="existingAdminLogin()" class="form-button">
+                        Login
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div id="new-doctor">
+            <form>
+                <div class="container">
+                    <table class="form-table">
+                        <tr>
+                            <td class="form-table-data">
+                                <label for="doctor-username" class="text-labels"><b>Doctor Username: </b></label>
+                            </td>
+                            <td class="form-table-data">
+                                <input type="text" id="doctor-username" class="text-field" name="doctor-username" placeholder="doctor Username *">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="form-table-data">
+                                <label for="doctor-password" class="text-labels"><b>Doctor Password: </b></label>
+                            </td>
+                            <td class="form-table-data">
+                                <input type="password" id="doctor-password" class="text-field" name="doctor-password" placeholder="doctor Password *">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="form-table-data">
+                                <label for="confirm-doctor-password" class="text-labels"><b>Confirm Doctor Password: </b></label>
+                            </td>
+                            <td class="form-table-data">
+                                <input type="password" id="confirm-doctor-password" class="text-field" name="confirm-doctor-password" placeholder="doctor Password *">
+                            </td>
+                        </tr>
+                    </table>
+                    <button type="button" onclick="newDoctorLogin()" class="form-button">
+                        Login
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div id="existing-doctor">
+            <form>
+                <div class="container">
+                    <table class="form-table">
+                        <tr>
+                            <td class="form-table-data">
+                                <label for="doctor-username" class="text-labels"><b>Doctor Username: </b></label>
+                            </td>
+                            <td class="form-table-data">
+                                <input type="text" id="doctor-username" class="text-field" name="doctor-username" placeholder="doctor Username *">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="form-table-data">
+                                <label for="doctor-password" class="text-labels"><b>Doctor Password: </b></label>
+                            </td>
+                            <td class="form-table-data">
+                                <input type="password" id="doctor-password" class="text-field" name="doctor-password" placeholder="doctor Password *">
+                            </td>
+                        </tr>
+                    </table>
+                    <button type="button" onclick="existingDoctorLogin()" class="form-button">
+                        Login
+                    </button>
+                </div>
+            </form>
+        </div>
+<script src="index.js"></script>        
+</body>
+</html>
