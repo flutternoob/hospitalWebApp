@@ -1,6 +1,6 @@
 //New admin option
 
-function neDoctor() {
+function newAdmin() {
     let x = document.getElementById("new-admin");
     let y = document.getElementById("existing-admin");
     if (x.style.display === "none") {
@@ -23,7 +23,7 @@ function neDoctor() {
 
 //Existing admin option
   
-function existingDoctor() {
+function existingAdmin() {
     let x = document.getElementById("new-admin");
     let y = document.getElementById("existing-admin");
     if (y.style.display === "none") {
