@@ -1,0 +1,10 @@
+[
+  {
+    "doctorUsername": "doctorUsername1",
+    "doctorPassword": "doctorPassword1"
+  },
+  {
+    "doctorUsername": "doctorUsername2",
+    "doctorPassword": "doctorPassword2"
+  }
+]

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="doctorPatient.css">
+    <title>Patient's File</title>
+    <link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css'
+          rel='stylesheet'>
+</head>
+<body>
+    <img src="../assets/favicon.png">
+
+    <form>
+        <div class="container">
+        <table>
+            <tr>
+                <td>
+                    <label for="uhid" class="text-labels"><b>Patient UHID</b></label>
+                </td>
+                <td>
+                    <input type="text" id="uhid" class="text-field" name="uhid" placeholder="UHID *">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="assigned-from-doctor" class="text-labels"><b>Acquire patient file from:</b></label>
+                </td>
+                <td>
+                    <select id="assigned-from-doctor" class="clearfix text-field" name="assigned-from-doctor" placeholder="Department *">
+                        <option value="default"></option>
+                        <option value="doctor1">Doctor 1</option>
+                        <option value="doctor2">Doctor 2</option>
+                        <option value="doctor3">Doctor 3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="assigned-to-doctor" class="text-labels"><b>Assign patient file to</b></label>
+                </td>
+                <td>
+                    <select id="assigned-to-doctor" class="clearfix text-field" name="assigned-to-doctor" placeholder="Unit *">
+                        <option value="default"></option>
+                        <option value="doctor1">Doctor 1</option>
+                        <option value="doctor2">Doctor 2</option>
+                        <option value="doctor3">Doctor 3</option>
+                        <option value="doctor4">Doctor 4</option>
+                        <option value="doctor5">Doctor 5</option>
+                    </select><br><br>
+                    <button type="button" onclick="assignDoctor()">
+                        Assign Doctor
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Assigned Doctor</b>
+                </td>
+                <td>
+                    <p id="assigned-doctor"></p>
+                </td>
+            </tr>
+            <tr></tr>
+                <td>
+                    <label for="datepicker" class="text-labels"><b>Select today's date </b></label>
+                </td>
+                <td>
+                    <input type="text" id="datepicker" class="text-field" name="datepicker" placeholder="Today's date *">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="case-notes" class="text-labels"><b>Case Notes</b></label>
+                </td>
+                <td>
+                    <a href="../assets/sample.pdf" target="_blank">View Case History</a><br><br>
+                    <textarea name="message" rows="10" cols="30" id="case-notes" name="case-notes" placeholder="Case Notes *"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="prescription" class="text-labels"><b>Prescription</b></label>
+                </td>
+                <td>
+                    <textarea name="message" rows="10" cols="30" id="prescription" name="prescription" placeholder="Prescription *"></textarea>
+                </td>
+            </tr>
+        </table>
+        <button type="button" onclick="updateCase()">
+            Update Case
+        </button>
+        </div>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="doctorPatient.js"></script>
+</body>
+</html>
